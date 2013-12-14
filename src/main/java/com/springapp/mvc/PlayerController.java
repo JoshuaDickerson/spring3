@@ -2,8 +2,6 @@ package com.springapp.mvc;
 
 import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.ModelMap;
@@ -14,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/")
 public class PlayerController {
     @Autowired
-    PlayerDAO dao;
+    PlayerDAO dao; // this is built and autowired
 
 	@RequestMapping(method = RequestMethod.GET)
     @Transactional
@@ -30,7 +28,9 @@ public class PlayerController {
 
         Gson gson = new Gson();
         String json = gson.toJson(player);
-		model.addAttribute("message", json);
-		return "hello";
+
+		model.addAttribute("json", json);
+        // here, json referrs to the json.jsp page being rendered
+		return "json";
 	}
 }
