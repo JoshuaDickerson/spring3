@@ -23,8 +23,8 @@
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
           destroy-method="close">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://127.0.0.1:3306/TEST" />
-        <property name="username" value="" />
+        <property name="url" value="jdbc:mysql://127.0.0.1:3306/TEST" /> <!-- TEST is the name of the database -->
+        <property name="username" value="" /> <!-- my dev database takes no username/password, you'll have to edit this to meet your needs -->
         <property name="password" value="" />
     </bean>
 

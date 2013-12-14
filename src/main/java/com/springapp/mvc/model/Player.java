@@ -9,12 +9,15 @@ import java.util.List;
 @Entity
 @Table(name="player")
 public class Player{
+    // note, you have to make sure your database is set up in mvc-dispatcher-servlet.xml
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="id", nullable = false)
     private int id;
 
-    @Column(name="first_name")
+    @Column(name="first_name") // this annotation maps the table column to the object's field
     private String firstName;
     @Column(name="last_name")
     private String lastName;
