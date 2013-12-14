@@ -39,7 +39,7 @@
         <property name="packagesToScan" value="com.springapp.mvc" />
     </bean>
 
-    <bean id="playerDAO" class="com.springapp.mvc.PlayerDAO">
+    <bean id="playerDAO" class="com.springapp.mvc.persistence.PlayerDAO">
         <property name="sessionFactory" ref="sessionFactory" />
     </bean>
 
