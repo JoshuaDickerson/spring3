@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="spring3:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="spring3.war">
+      <element id="artifact" artifact-name="spring3:war exploded" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="com.mysql.jdbc:com.springsource.com.mysql.jdbc:5.1.6" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
