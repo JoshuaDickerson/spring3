@@ -32,7 +32,7 @@ public class PlayerController {
        // Insert a new player into the database
 //        Person player = new Person();
 //        player.setLastName("dickerson");
-//        player.setFirstName("josh");
+//        player.setFirst_name("josh");
 //        player.setBirthYear(1980);
 //        dao.insertPerson(player);
 
