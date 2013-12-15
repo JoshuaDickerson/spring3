@@ -1,8 +1,8 @@
 package com.springapp.mvc.controller;
 
 import com.google.gson.Gson;
-import com.springapp.mvc.persistence.PlayerDAO;
-import com.springapp.mvc.model.Player;
+import com.springapp.mvc.persistence.PersonDAO;
+import com.springapp.mvc.model.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
@@ -16,7 +16,7 @@ import java.util.List;
 @RequestMapping("/")
 public class PlayerController {
     @Autowired
-    PlayerDAO dao; // this is built and autowired
+    PersonDAO dao; // this is built and autowired
     private Gson gson = new Gson(); // google's json library
 
 
@@ -25,18 +25,18 @@ public class PlayerController {
 	public String printWelcome(ModelMap model) {
 
        // Insert a new player into the database
-//        Player player = new Player();
+//        Person player = new Person();
 //        player.setLastName("dickerson");
 //        player.setFirstName("josh");
 //        player.setJersey(33);
 //        player.setBirthYear(1980);
-//        dao.insertPlayer(player);
+//        dao.insertPerson(player);
 
-        // get all of the players
-        List<Player> players = dao.getPlayers();
+        // get all of the persons
+        List<Person> persons = dao.getPersons();
 
 
-        String json = gson.toJson(players.toArray());
+        String json = gson.toJson(persons.toArray());
         // our model is like a dictionary we do lookups on in our jsp page
 		model.addAttribute("json", json);
         // here, json referrs to the json.jsp page being rendered
