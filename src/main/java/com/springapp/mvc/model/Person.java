@@ -19,8 +19,6 @@ public class Person {
     private String firstName;
     @Column(name="last_name")
     private String lastName;
-    @Column(name="jersey")
-    private int jersey;
     @Column(name="birth_year")
     private int birthYear;
     @Column(name="email")
@@ -56,14 +54,6 @@ public class Person {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
-
-    public int getJersey() {
-        return jersey;
-    }
-
-    public void setJersey(int jersey) {
-        this.jersey = jersey;
     }
 
     public int getBirthYear() {
