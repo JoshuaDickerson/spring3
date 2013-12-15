@@ -12,6 +12,13 @@
     </properties>
 
     <dependencies>
+        <!--
+        This is for adding external libraries. If you google "neatoJavaLibraryName maven" you can find links to public maven repos
+        for most every library you're looking for. When I googled "JSON library maven" I found this:
+        http://mvnrepository.com/artifact/com.google.code.gson/gson/2.2.4
+        look halfway down the page, find the xml, and paste it in here, and unless your IDE is configured for maven,
+        it will likely ask you if you want to download the jar, after which you can use it.
+        -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>

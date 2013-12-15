@@ -17,11 +17,11 @@ import java.util.List;
 public class PlayerController {
     @Autowired
     PlayerDAO dao; // this is built and autowired
+    private Gson gson = new Gson(); // google's json library
 
-    private Gson gson = new Gson();
 
-	@RequestMapping(method = RequestMethod.GET)
-    @Transactional
+	@RequestMapping(method = RequestMethod.GET) // when we come to the URL above, with the method indicated below, call this method of the controller
+    @Transactional // this tells the app to start a hibernate session for DB interactions
 	public String printWelcome(ModelMap model) {
 
        // Insert a new player into the database
